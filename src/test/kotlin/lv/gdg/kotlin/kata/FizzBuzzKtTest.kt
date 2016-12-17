@@ -20,4 +20,19 @@ class FizzBuzzKtTest {
     @Test fun shouldPrintFizzBuzz() {
         assertEquals("FizzBuzz", fizzBuzz(30))
     }
+
+    @Test
+    fun shouldPrintFizz_ifContains3() {
+        assertEquals("Fizz", fizzBuzz(13))
+    }
+
+    @Test
+    fun shouldPrintFizz_ifContains5() {
+        assertEquals("Buzz", fizzBuzz(25))
+    }
+
+    @Test
+    fun shouldPrintFizz_ifContains3and5() {
+        assertEquals("FizzBuzz", fizzBuzz(35))
+    }
 }

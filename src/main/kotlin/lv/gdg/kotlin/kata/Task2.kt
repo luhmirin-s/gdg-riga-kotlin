@@ -1,5 +1,7 @@
 package lv.gdg.kotlin.kata
 
+import lv.gdg.kotlin.kata.Coin.Penny
+
 
 /**
  * There are four types of common coins in US currency:
@@ -21,10 +23,10 @@ package lv.gdg.kotlin.kata
  */
 
 sealed class Coin(val value: Int) {
-    class Quarter : Coin(25)
-    class Dime : Coin(10)
-    class Nickel : Coin(5)
-    class Penny : Coin(1)
+    object Quarter : Coin(25)
+    object Dime : Coin(10)
+    object Nickel : Coin(5)
+    object Penny : Coin(1)
 }
 
 fun Int.getPossibleCoinCombinations(): List<List<Coin>> {
@@ -32,8 +34,13 @@ fun Int.getPossibleCoinCombinations(): List<List<Coin>> {
 }
 
 fun Int.getCoins(coin: Coin)  = this / coin.value
+
 fun Int.getChange(coin: Coin): Pair<Int, Int> {
     val count = this.getCoins(coin)
     val change = this % coin.value
     return (count to change)
+}
+
+fun Int.getPennies(): List<Penny> {
+   return listOf(Penny, Penny, Penny, Penny, Penny)
 }

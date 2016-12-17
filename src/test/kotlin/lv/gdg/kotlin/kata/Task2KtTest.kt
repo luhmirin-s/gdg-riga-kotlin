@@ -20,4 +20,11 @@ class Task2KtTest {
         assertEquals(4, 20.getCoins(Nickel()))
         assertEquals(20, 20.getCoins(Penny()))
     }
+
+    @Test
+    fun getChangeAfterType() {
+        assertEquals((2 to 1), 51.getChange(Quarter()))
+        assertEquals((5 to 1), 51.getChange(Dime()))
+        assertEquals((51 to 0), 51.getChange(Penny()))
+    }
 }

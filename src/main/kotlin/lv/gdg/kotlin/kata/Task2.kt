@@ -32,4 +32,8 @@ fun Int.getPossibleCoinCombinations(): List<List<Coin>> {
 }
 
 fun Int.getCoins(coin: Coin)  = this / coin.value
-
+fun Int.getChange(coin: Coin): Pair<Int, Int> {
+    val count = this.getCoins(coin)
+    val change = this % coin.value
+    return (count to change)
+}

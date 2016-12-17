@@ -1,9 +1,8 @@
 package lv.gdg.kotlin.kata
 
 fun fizzBuzz(num: Int): String {
-    var result = ""
+    var result = "".appendFizz(num)
 
-    result += if(isFizz(num)) "Fizz" else ""
     result += if(isBuzz(num)) "Buzz" else ""
 
     return if(result.isEmpty()){
@@ -14,6 +13,10 @@ fun fizzBuzz(num: Int): String {
 }
 
 
- fun isFizz(i: Int) = i % 3 == 0 || "$i".contains('3')
+fun isFizz(i: Int) = i % 3 == 0 || "$i".contains('3')
 
- fun isBuzz(i: Int) = i % 5 == 0 || "$i".contains('5')
+fun isBuzz(i: Int) = i % 5 == 0 || "$i".contains('5')
+
+private fun String.appendFizz(num: Int): String{
+    return this + if (isFizz(num)) "Fizz" else ""
+}

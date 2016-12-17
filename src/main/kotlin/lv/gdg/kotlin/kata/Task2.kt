@@ -19,3 +19,15 @@ package lv.gdg.kotlin.kata
  * How many ways are there to make change for a dollar
  * using these common coins? (1 dollar = 100 cents).
  */
+
+sealed class Coin(val value: Int) {
+    class Quarter : Coin(25)
+    class Dime : Coin(10)
+    class Nickel : Coin(5)
+    class Penny : Coin(1)
+}
+
+fun Int.getPossibleCoinCombinations(): List<List<Coin>> {
+    return (1..6).map { listOf<Coin>() }
+}
+

@@ -31,3 +31,5 @@ fun Int.getPossibleCoinCombinations(): List<List<Coin>> {
     return (1..6).map { listOf<Coin>() }
 }
 
+fun Int.getCoins(coin: Coin)  = this / coin.value
+

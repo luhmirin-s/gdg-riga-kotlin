@@ -42,5 +42,11 @@ fun Int.getChange(coin: Coin): Pair<Int, Int> {
 }
 
 fun Int.getPennies(): List<Penny> {
-   return listOf(Penny, Penny, Penny, Penny, Penny)
+   return Penny * this
 }
+
+private infix operator fun <T:Coin> T.times(x: Int): List<T> {
+    return (0..x).map {this}
+}
+
+

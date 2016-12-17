@@ -5,7 +5,7 @@ import lv.gdg.kotlin.kata.Coin.Nickel
 import lv.gdg.kotlin.kata.Coin.Penny
 import lv.gdg.kotlin.kata.Coin.Quarter
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
+import org.junit.Assert.assertFalse
 import org.junit.Test
 
 class Task2KtTest {
@@ -36,7 +36,7 @@ class Task2KtTest {
     }
 
     private fun assertListEquals(listOf: List<Penny>, pennies: List<Penny>) {
-        assertTrue(listOf.zip(pennies).any{p-> p.first != p.second})
+        assertFalse(listOf.zip(pennies).any{p-> p.first != p.second})
     }
 
 }

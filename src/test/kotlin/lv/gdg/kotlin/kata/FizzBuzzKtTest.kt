@@ -40,14 +40,17 @@ class FizzBuzzKtTest {
 
     @Test
     fun shouldReturnTrueIfFizz() {
-        assertTrue(isFizz(3))
-        assertTrue(isFizz(13))
+        assertTrue(3.containsNumber(3))
+        assertTrue(13.containsNumber(3))
+        assertTrue(9.containsNumber(3))
     }
 
     @Test
     fun shouldReturnTrueIfBuzz() {
-        assertTrue(isBuzz(5))
-        assertTrue(isBuzz(25))
+    assertTrue(10.containsNumber(5))
+    assertTrue(5.containsNumber(5))
+    assertTrue(25.containsNumber(5))
+
     }
 
 }

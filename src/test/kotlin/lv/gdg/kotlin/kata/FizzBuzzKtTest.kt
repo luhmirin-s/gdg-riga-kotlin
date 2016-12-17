@@ -1,6 +1,7 @@
 package lv.gdg.kotlin.kata
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class FizzBuzzKtTest {
@@ -35,4 +36,17 @@ class FizzBuzzKtTest {
     fun shouldPrintFizz_ifContains3and5() {
         assertEquals("FizzBuzz", fizzBuzz(35))
     }
+
+    @Test
+    fun shouldReturnTrueIfFizz() {
+        assertTrue(isFizz(3))
+        assertTrue(isFizz(13))
+    }
+
+    @Test
+    fun shouldReturnTrueIfBuzz() {
+        assertTrue(isBuzz(5))
+        assertTrue(isBuzz(25))
+    }
+
 }

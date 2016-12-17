@@ -12,6 +12,7 @@ class FizzBuzzKtTest {
 
     @Test fun shouldPrintFizz() {
         assertEquals ("Fizz", fizzBuzz(3))
+        assertEquals ("Fizz", fizzBuzz(9))
     }
 
     @Test fun shouldPrintBuzz() {

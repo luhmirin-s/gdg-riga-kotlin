@@ -1,16 +1,16 @@
 package lv.gdg.kotlin.kata
 
 fun fizzBuzz(num: Int): String {
-    return when {
-        num.toString().contains('5') && num.toString().contains('3') -> "FizzBuzz"
-        num % 15 == 0 -> "FizzBuzz"
-        num % 5 == 0 -> "Buzz"
+    var result = ""
 
-        num.toString().contains('5') -> "Buzz"
-        num.toString().contains('3') -> "Fizz"
-        else -> num.toString()
+    result += if(isFizz(num)) "Fizz" else ""
+    result += if(isBuzz(num)) "Buzz" else ""
+
+    return if(result.isEmpty()){
+        "$num"
+    } else {
+        result
     }
-
 }
 
 
